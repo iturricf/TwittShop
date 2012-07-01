@@ -1,0 +1,106 @@
+ProductCategory:
+  ProductCategory_1_2:
+    Product: Product_1
+    Category: Category_2
+  ProductCategory_2_2:
+    Product: Product_2
+    Category: Category_2
+Category:
+  Category_1:
+    name: Categories
+    active: true
+    created_at: '2012-06-30 16:58:21'
+    updated_at: '2012-06-30 16:58:21'
+    slug: categories
+    Category: Category_1
+    lft: '1'
+    rgt: '42'
+    level: '0'
+  Category_2:
+    name: Pizzas
+    active: true
+    created_at: '2012-06-30 16:59:41'
+    updated_at: '2012-06-30 16:59:41'
+    slug: pizzas
+    Category: Category_1
+    lft: '40'
+    rgt: '41'
+    level: '1'
+Product:
+  Product_1:
+    name: 'Pizza Muzarella con morrones'
+    code: '14477'
+    description: "<p>\r\n	Pizza Muzarella con morrones</p>\r\n"
+    weight: '0.00'
+    photo_path: pizza_de_muzzarella_y_morron.jpg
+    quantity: '20'
+    price: '39.90'
+    saleprice: null
+    active: true
+    created_at: '2012-06-30 17:00:11'
+    updated_at: '2012-06-30 17:00:11'
+    slug: pizza-muzarella-con-morrones
+  Product_2:
+    name: 'Pizza especial de muzarella'
+    code: '14077'
+    description: "<p>\r\n	Pizza especial de muzarella</p>\r\n"
+    weight: '0.00'
+    photo_path: pizza_mozzarella_01.jpg
+    quantity: '15'
+    price: '44.90'
+    saleprice: null
+    active: true
+    created_at: '2012-06-30 17:01:00'
+    updated_at: '2012-06-30 17:01:00'
+    slug: pizza-especial-de-muzarella
+ProductIndex:
+  ProductIndex_1_14477_code_0:
+    keyword: '14477'
+    field: code
+    position: '0'
+    Product: Product_1
+  ProductIndex_1_con_name_2:
+    keyword: con
+    field: name
+    position: '2'
+    Product: Product_1
+  ProductIndex_1_morrones_name_3:
+    keyword: morrones
+    field: name
+    position: '3'
+    Product: Product_1
+  ProductIndex_1_muzarella_name_1:
+    keyword: muzarella
+    field: name
+    position: '1'
+    Product: Product_1
+  ProductIndex_1_pizza_name_0:
+    keyword: pizza
+    field: name
+    position: '0'
+    Product: Product_1
+  ProductIndex_2_14077_code_0:
+    keyword: '14077'
+    field: code
+    position: '0'
+    Product: Product_2
+  ProductIndex_2_de_name_2:
+    keyword: de
+    field: name
+    position: '2'
+    Product: Product_2
+  ProductIndex_2_especial_name_1:
+    keyword: especial
+    field: name
+    position: '1'
+    Product: Product_2
+  ProductIndex_2_muzarella_name_3:
+    keyword: muzarella
+    field: name
+    position: '3'
+    Product: Product_2
+  ProductIndex_2_pizza_name_0:
+    keyword: pizza
+    field: name
+    position: '0'
+    Product: Product_2

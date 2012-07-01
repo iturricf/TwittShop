@@ -1,0 +1,42 @@
+Pedido:
+  actAs: { Timestampable: ~ }
+  columns:
+    user_id: { type: integer }
+    tw_user_id: { type: integer }
+    codigo_pedido: { type: integer }
+    status: { type: integer }
+    total: { type: decimal, notnull: true }
+    pago_recibido: { type: decimal, notnull: true }
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      foreignAlias: Pedidos
+
+DetallePedido:
+  columns:
+    pedido_id: { type: integer, notnull: true }
+    producto_id: { type: integer, notnull: true }
+    cantidad: { type: integer, notnull: true, default: 1 }
+    subtotal: { type: decimal, notnull: true }
+  relations:
+    Pedido: { local: pedido_id, foreign: id, foreignAlias: DetallesPedido }
+    Product: { local: producto_id, foreign: id }
+
+TwittBase: 
+  actAs: { Timestampable: ~ }
+  columns:
+    tw_username:        { type: string(50) }
+    tw_nickname:        { type: string(100) }
+    tw_id:              { type: integer }
+    tw_user_id:         { type: integer }
+    tw_timestamp:       { type: integer }
+    tw_retwitt_user:    { type: integer }
+    content:            { type: string(160) }
+    status:             { type: integer }
+    pedido_id:          { type: integer }
+    user_id:            { type: integer }
+  relations:
+    Pedido: { local: pedido_id, foreign: id, foreignAlias: TwittsBase }
+    User:   { class: sfGuardUser, local: user_id, foreign: id, foreignAlias: TwittsBase }
